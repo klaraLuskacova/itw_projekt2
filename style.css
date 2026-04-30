@@ -1,0 +1,919 @@
+/*tecky v rohu*/
+.dekor_roh {
+    position: relative;
+    top: 27rem;
+    right: 0;
+    margin-left: auto;
+    margin-top: -22rem;
+
+    width: 22rem;
+    height: 22rem;
+
+    /*tecky - barva a velikost*/
+    background-image: radial-gradient(circle, #c269a3 2px, transparent 2px);
+    background-size: 1.2rem 1.2rem;
+
+    /*vytvori mrizku*/
+    mask-image: radial-gradient(circle at top right, black 10%, transparent 70%);
+
+    /*tecky jdou postupne do pruhledna*/
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/*tecky dole v rohu*/
+.dekor_roh_dole {
+    position: relative;
+    top: 6rem;
+    left: 0;
+    margin-top: -22rem;
+
+    width: 22rem;
+    height: 22rem;
+
+    /*tecky - barva a velikost*/
+    background-image: radial-gradient(circle, #c269a3 2px, transparent 2px);
+    background-size: 1.2rem 1.2rem;
+
+    /*vytvori mrizku*/
+    mask-image: radial-gradient(circle at bottom left, black 10%, transparent 70%);
+
+    /*tecky jdou postupne do pruhledna*/
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+
+/*hlavicka*/
+.header {
+    /*zustane nahore pri scrollovani*/
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    /*loga a navigace vedle sebe*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    padding: 1rem 2rem;
+
+    /*pozadi je trochu pruhledne*/
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 18px rgba(80, 45, 60, 0.08);
+
+    /*pomalejsi animace*/
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/*pri hover uz neni pozadi pruhledne a ma vetsi shadow*/
+.header:hover {
+    background-color: rgba(255, 250, 252, 1);
+    box-shadow: 0 8px 24px rgba(80, 45, 60, 0.12);
+}
+
+
+
+/*menu*/
+.navigace ul {
+    /*odkazy vedle sebe*/
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*odkazy v menu*/
+.navigace a {
+    display: block;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #374151;
+
+    /*pomalejsi animace*/
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+/*pri hoveru se odkazy posuhou a zmeni barvu*/
+.navigace a:hover {
+    text-decoration: none;
+    background-color: #efe0ea;
+    color: #c269a3;
+    transform: translateY(-2px);
+}
+
+/*zvyraznuje se aktivni odkaz pri scrollu*/
+.navigace a.aktivni {
+    background-color: #efe0ea;
+    color: #c269a3;
+}
+
+
+
+/*logo vlevo*/
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #c269a3;
+    white-space: nowrap;
+}
+
+/*kolecko s inicialy*/
+.logo_znacka {
+    display: grid;
+    place-items: center;
+
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 800;
+
+    color: #ffffff;
+    background-color: #c269a3;
+
+    /*pomalejsi animace*/
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/*zmena barvy jmena pri hover*/
+.logo:hover {
+    text-decoration: none;
+    color: #374151;
+}
+
+/*zmena barvy kolecka pri hover*/
+.logo:hover .logo_znacka {
+    background-color: #374151;
+}
+
+
+
+/*uvodni sekce*/
+.uvod_sekce {
+    max-width: 1200px;
+    min-height: 85vh;
+    margin: 0 auto;
+    padding: 6rem 1.5rem 5rem;
+
+    /*rozlozeni textu a obrazku vedle sebe*/
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+/*nadpis*/
+.uvod_obsah h1 {
+    margin-bottom: 1.5rem;
+    color: #2f2830;
+}
+
+/*tlacitko*/
+.uvod_tlacitko {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.85rem 1.4rem;
+
+    border-radius: 999px;
+    background-color: #3f4f46;
+    color: white;
+
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(63, 79, 70, 0.18);
+
+    /*pomalejsi animace*/
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+/*pri hoveru se tlacitko posune a zmeni barvu*/
+.uvod_tlacitko:hover {
+    text-decoration: none;
+    background-color: #2f3d35;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(63, 79, 70, 0.25);
+}
+
+/*pocitadlo*/
+.uvod_stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+/*jedna pocitana vec*/
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+/*cislo v pocitadle*/
+.stat_cislo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #c269a3;
+    line-height: 1;
+}
+
+/*popisek pod cislem*/
+.stat_popisek {
+    font-size: 0.85rem;
+    color: #5f5660;
+    margin-top: 0.2rem;
+}
+
+/*obrazek*/
+.uvod_obrazek {
+    position: relative;
+}
+.uvod_obrazek img {
+    width: 100%;
+    max-height: 430px;
+    object-fit: cover;
+
+    border-radius: 2rem;
+    box-shadow: 0 20px 45px rgba(47, 40, 48, 0.18);
+    filter: saturate(0.9);
+}
+
+
+
+/*sekce obsah*/
+.obsah_sekce {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 5rem 2rem 3rem;
+
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 18px 45px rgba(47, 40, 48, 0.08);
+}
+
+/*svetle sekce*/
+.obsah_svetly {
+    background: linear-gradient(135deg,rgba(255, 255, 255, 0.95),rgba(244, 244, 245, 0.9));
+}
+
+/*hlavicka sekce*/
+.obsah_hlavicka {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 1.4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/*radek s popiskem a ikonkou*/
+.obsah_popisek_radek {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/*gradient cara u nadpisu*/
+.obsah_hlavicka::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25rem;
+
+    width: 0.35rem;
+    height: 4.2rem;
+    border-radius: 999px;
+
+    background: linear-gradient(to bottom,#c269a3,#3f4f46);
+}
+
+/*uvodni text sekce*/
+.obsah_uvod {
+    max-width: 100%;
+    margin-bottom: 2.5rem;
+    color: #5f5660;
+    font-size: 1.05rem;
+}
+
+/*ikonka u nazvu sekce*/
+.obsah_ikonka {
+    font-size: 1.2rem;
+    color: #c269a3;
+    margin-bottom: 0.5rem;
+}
+
+
+
+/*o mne sekce*/
+#o_mne {
+    position: relative;
+    overflow: hidden;
+}
+
+/*text*/
+.obsah_text {
+    position: relative;
+
+    padding: 2rem;
+    /*barevny okraj*/
+    border-left: 5px solid #c269a3;
+    border-radius: 1.5rem;
+
+    background-color: rgba(255, 255, 255, 0.78);
+    box-shadow: 0 16px 38px rgba(47, 40, 48, 0.08);
+}
+.obsah_text p {
+    margin-top: 0;
+}
+.obsah_text p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+/*vzdelani - karty*/
+.karty_mrizka {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.3rem;
+    margin-top: 2.5rem;
+}
+
+/*jedna karta*/
+.info_karta {
+    padding: 1.7rem;
+    border-radius: 1.4rem;
+
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(194, 105, 163, 0.15);
+    box-shadow: 0 12px 30px rgba(47, 40, 48, 0.07);
+
+    /*pomalejsi animace*/
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/*pri hoveru se karta posune a zmeni shadow*/
+.info_karta:hover {
+    transform: translateY(-0.35rem);
+    box-shadow: 0 24px 50px rgba(47, 40, 48, 0.16);
+}
+
+/*nadpis a text*/
+.info_karta h3 {
+    color: #3f4f46;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+.info_karta p {
+    margin-bottom: 0;
+    color: #5f5660;
+}
+
+
+
+/*projekty sekce*/
+.projekty_seznam {
+    position: relative;
+
+    display: grid;
+    gap: 2rem;
+
+    margin-top: 3rem;
+    padding-left: 2.5rem;
+}
+
+/*cara casove osy*/
+.projekty_seznam::before {
+    content: "";
+    position: absolute;
+    left: 0.45rem;
+    top: 0;
+    bottom: 0;
+
+    width: 3px;
+    border-radius: 999px;
+
+    background: linear-gradient(to bottom,#c269a3,#3f4f46);
+}
+
+/*karta projektu*/
+.projekt_karta {
+    position: relative;
+
+    padding: 2rem;
+    border-radius: 1.5rem;
+
+    background-color: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(194, 105, 163, 0.18);
+    box-shadow: 0 14px 35px rgba(47, 40, 48, 0.08);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/*kolecko na casove ose*/
+.projekt_karta::before {
+    content: "";
+    position: absolute;
+    left: -2.67rem;
+    top: 2.2rem;
+
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+
+    background-color: #ffffff;
+    border: 4px solid #c269a3;
+
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/*hover karty*/
+.projekt_karta:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 0 20px 45px rgba(47, 40, 48, 0.13);
+}
+
+
+/*cislo projektu*/
+.projekt_cislo {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+
+    color: #c269a3;
+}
+
+/*nadpis konkretniho projektu*/
+.projekt_karta h3 {
+    margin-bottom: 0;
+    color: #3f4f46;
+}
+
+/*text projektu*/
+.projekt_karta p {
+    margin-top: 0;
+    color: #5f5660;
+}
+
+/*tagy projektu*/
+.projekt_tagy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+}
+
+.projekt_tagy span {
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+
+    background-color: #efe0ea;
+    color: #5f3b50;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/*info o projektu*/
+.projekt_info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+
+    margin-top: 0.9rem;
+
+    font-size: 0.85rem;
+    color: #5f5660;
+}
+.projekt_info i {
+    color: #c269a3;
+    margin-right: 0.3rem;
+}
+
+/*podsekce co jsem se naucila*/
+.projekt_naucila {
+    margin-top: 1.2rem;
+    padding-top: 1.2rem;
+
+    border-top: 1px solid rgba(194, 105, 163, 0.15);
+}
+
+/*nadpis podsekce*/
+.projekt_naucila h4 {
+    margin: 0 0 0.5rem;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #3f4f46;
+}
+
+/*seznam veci*/
+.projekt_naucila ul {
+    margin: 0;
+    padding-left: 1.2rem;
+
+    color: #5f5660;
+    font-size: 0.9rem;
+}
+
+.projekt_naucila li {
+    margin-bottom: 0.3rem;
+}
+
+
+
+/*dovednosti*/
+.dovednosti_mrizka {
+    /*ctyri karty vedle sebe*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.3rem;
+    margin-top: 2.5rem;
+}
+
+/*jedna karta*/
+.dovednost_karta {
+    padding: 1.6rem;
+    border-radius: 1.4rem;
+    text-align: center;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(194, 105, 163, 0.15);
+    box-shadow: 0 12px 30px rgba(47, 40, 48, 0.07);
+
+    /*pomalejsi animace*/
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/*pri hoveru se karta posune a zmeni shadow*/
+.dovednost_karta:hover {
+    transform: translateY(-0.35rem);
+    box-shadow: 0 24px 50px rgba(47, 40, 48, 0.16);
+}
+
+/*nadpis*/
+.dovednost_karta h3 {
+    margin-bottom: 1rem;
+    color: #3f4f46;
+}
+
+/*seznam*/
+.dovednost_karta ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.dovednost_karta li {
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+
+    background-color: #efe0ea;
+    color: #5f3b50;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/*ikonky u dovednosti*/
+.dovednost_karta li i {
+    margin-right: 0.3rem;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+
+
+/*kontakt*/
+.kontakt_sekce {
+    position: relative;
+    
+}
+
+/*kontakt karta*/
+.kontakt_karta {
+    position: relative;
+
+    max-width: 650px;
+    margin-top: 2rem;
+    padding: 2rem;
+
+    border-radius: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(194, 105, 163, 0.18);
+    box-shadow: 0 18px 45px rgba(47, 40, 48, 0.1);
+
+    /*zruseni kurzivy u odkazu*/
+    font-style: normal;
+}
+
+/*text*/
+.kontakt_karta p {
+    margin: 0 0 1rem;
+}
+.kontakt_karta p:last-child {
+    margin-bottom: 0;
+}
+.kontakt_karta strong {
+    color: #3f4f46;
+}
+
+/*odkaz na mail*/
+.kontakt_karta a {
+    color: #c269a3;
+    font-weight: 700;
+}
+/*odkaz meni barvu pri hover*/
+.kontakt_karta a:hover {
+    color: #3f4f46;
+    text-decoration: none;
+}
+
+
+
+/* tlacitko zpet nahoru */
+#sipecka {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+}
+#sipecka a {
+    display: grid;
+    place-items: center;
+
+    width: 3rem;
+    height: 3rem;
+    
+    /*aby to bylo kolecko*/
+    border-radius: 50%;
+
+    /*sipecka - barva*/
+    color: #ffffff;
+    /*okoli - barva*/
+    background: linear-gradient(135deg,#c269a3,#3f4f46);
+
+    box-shadow: 0 12px 30px rgba(80, 45, 60, 0.22);
+    /*pomalejsi animace*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+/*pri hoveru se sipecka posune a zmeni shadow*/
+#sipecka a:hover {
+    text-decoration: none;
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(80, 45, 60, 0.32);
+}
+/*velikost ikonky(sipky)*/
+#sipecka i {
+    font-size: 1rem;
+}
+
+
+
+/*paticka*/
+.footer {
+    margin-top: 6rem;
+    padding: 3rem 2rem 1.5rem;
+
+    /*pozadi gradient*/
+    background: linear-gradient(135deg,#949a97,#302e30);
+}
+/*obsah paticky - text a ikonky vedle sebe*/
+.footer_obsah {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+/*nadpis a text*/
+.footer h2 {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+.footer p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/*ikonky*/
+.footer_ikony {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+/*jedna ikonka*/
+.footer_ikony i {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/*pri hoveru se ikonka zvyrazni a posune*/
+.footer_ikony i:hover {
+    color: #c269a3;
+    transform: translateY(-3px);
+}
+
+/*ikonky vedle sebe*/
+.footer_ikony div {
+    display: flex;
+    gap: 0.8rem;
+}
+
+/*copyright*/
+.footer_copyright {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+
+/*zakladni nastaveni*/
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    position: relative;
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    color: #2f2830;
+    background-color: #f4f4f5;
+    line-height: 1.6;
+}
+/*odkazy-zaklad*/
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/*nadpisy-zaklad*/
+h1, h2, h3 {
+    margin-top: 0;
+    line-height: 1.2;
+}
+h1, h2 {
+    font-family: "Playfair Display", Georgia, serif;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.2rem;
+}
+h3 {
+    font-size: 1.2rem;
+}
+
+/*hlavicky-zaklad*/
+.obsah_hlavicka {
+    margin-bottom: 2rem;
+}
+
+/*popisky-zaklad*/
+.obsah_popisek,
+.uvod_popisek {
+    margin: 0 0 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #c269a3;
+}
+
+.obsah_uvod,
+.obsah_text {
+    max-width: 750px;
+}
+
+/*hamburger*/
+.hamburger {
+    display: none;
+}
+
+
+
+/*pro mobily*/
+@media (max-width: 768px) {
+
+
+    /*hlavicka - logo vlevo,hamburger vpravo*/
+    .header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /*hamburger tlacitko*/
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.4rem;
+    }
+
+    /*tri carky hamburgeru*/
+    .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #374151;
+        border-radius: 999px;
+    }
+
+    /*navigace pod hlavickou*/
+    .navigace {
+        width: 100%;
+        order: 3;
+    }
+    /*navigace skryta na mobilu*/
+    .navigace ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+
+    /*kdyz je menu otevrene*/
+    .navigace.otevrene ul {
+        display: flex;
+    }
+    .navigace a {
+        padding: 0.45rem 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    /*uvod*/
+    .uvod_sekce {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 3rem 1.5rem;
+    }
+    .uvod_obrazek {
+        display: none;
+    }
+
+    /*nadpisy*/
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    /*sekce*/
+    .obsah_sekce {
+        padding: 3rem 1.5rem 2rem;
+        margin: 1.5rem 1rem;
+    }
+
+    /*vzdelani - 1 sloupec*/
+    .karty_mrizka {
+        grid-template-columns: 1fr;
+    }
+
+    /*dovednosti - 2 sloupce*/
+    .dovednosti_mrizka {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /*paticka*/
+    .footer_obsah {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+}
+
+

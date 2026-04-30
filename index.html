@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profilové portfolio | Klára Luskačová</title>
+
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!--ikonky-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="dekor_roh"></div>
+
+    <!--hlavicka-->
+    <header class="header">
+        <a href="#uvod" class="logo">
+            <span class="logo_znacka">KL</span>
+            <span>Klára Luskačová</span>
+        </a>
+
+        <nav class="navigace" aria-label="Hlavní navigace">
+            <ul>
+                <li><a href="#uvod">Úvod</a></li>
+                <li><a href="#o_mne">O mně</a></li>
+                <li><a href="#vzdelani">Vzdělání</a></li>
+                <li><a href="#projekty">Projekty</a></li>
+                <li><a href="#dovednosti">Dovednosti</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Otevřít menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!--obsah-->
+    <main>
+        <section id="uvod" class="uvod_sekce">
+            <div class="uvod_obsah">
+                <p class="uvod_popisek">Profilové portfolio</p>
+                <h1>Studentka IT se zájmem o programování a webové technologie</h1>
+                <p>
+                    Jmenuji se Klára Luskačová a studuji druhý ročník informačních technologií na FIT VUT v Brně.
+                    Tento web slouží jako moje osobní profilová prezentace, která představuje moje vzdělání, projekty, technické dovednosti a směr,
+                    kterým se chci dál rozvíjet.
+                </p>
+                <a href="#projekty" class="uvod_tlacitko">Zobrazit projekty</a>
+                <div class="uvod_stats">
+                    <div class="stat">
+                        <span class="stat_cislo">3</span>
+                        <span class="stat_popisek">projekty</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat_cislo">5</span>
+                        <span class="stat_popisek">jazyků</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat_cislo">2</span>
+                        <span class="stat_popisek">roky studia</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="uvod_obrazek">
+                <img src="obr1.jpg" alt="Ilustrační profilová fotografie">
+            </div>
+        </section>
+
+        <section id="o_mne" class="obsah_sekce">
+            <div class="obsah_hlavicka">
+                <div class="obsah_popisek_radek">
+                    <i class="fa-solid fa-user obsah_ikonka"></i>
+                    <p class="obsah_popisek">O mně</p>
+                </div>
+                <h2>Jak pracuji a co mě zajímá</h2>
+            </div>
+
+            <div class="obsah_text">
+                <p>
+                    Jsem studentka informačních technologií a postupně si buduju zkušenosti v programování, návrhu aplikací a práci s moderními
+                    nástroji. Nejvíce mě baví projekty, kde je vidět konkrétní výsledek jako například webová stránka, aplikace nebo program, který řeší jasný problém.
+                </p>
+                <p>
+                    Nové technologie a jazyky se učím nejraději přímo na konkrétním projektu.
+                    Přijde mi že práce na reálném zadání člověka naučí víc než samostudium bez jasného cíle. 
+                    Hledání příčiny a oprava mi přijde jako jedna z nejužitečnějších částí programování.
+                </p>
+            </div>
+        </section>
+
+        <section id="vzdelani" class="obsah_sekce obsah_svetly">
+            <div class="obsah_hlavicka">
+                <div class="obsah_popisek_radek">
+                    <i class="fa-solid fa-graduation-cap obsah_ikonka"></i>
+                    <p class="obsah_popisek">Vzdělání</p>
+                </div>
+                <h2>Studium informačních technologií</h2>
+            </div>
+
+            <p class="obsah_uvod">
+                Studuji obor zaměřený na informační technologie. Během studia se věnuji programování, algoritmům, databázím, operačním systémům, 
+                webovým technologiím a softwarovému návrhu.
+            </p>
+
+            <div class="karty_mrizka">
+                <article class="info_karta">
+                    <h3>Programování</h3>
+                    <p>
+                        Základy programování v jazycích C, Python, C#, C++ a Typescript.
+                    </p>
+                </article>
+
+                <article class="info_karta">
+                    <h3>Softwarové projekty</h3>
+                    <p>
+                        Práce na školních projektech zaměřených na interpretaci jazyků, databázové aplikace a síťové nástroje.
+                    </p>
+                </article>
+
+                <article class="info_karta">
+                    <h3>Webové technologie</h3>
+                    <p>
+                        Tvorba webových stránek pomocí HTML, CSS a základního JavaScriptu.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="projekty" class="obsah_sekce">
+            <div class="obsah_hlavicka">
+                <div class="obsah_popisek_radek">
+                    <i class="fa-solid fa-code obsah_ikonka"></i>
+                    <p class="obsah_popisek">Projekty</p>
+                </div>
+                <h2>Školní a technické projekty</h2>
+            </div>
+
+            <p class="obsah_uvod">
+                V rámci studia jsem pracovala na několika projektech, které mi pomohly
+                lépe pochopit programování, návrh aplikací a práci s větším zadáním.
+                Každý projekt byl zaměřený na jinou oblast a vyžadoval jiný způsob řešení.
+            </p>
+
+            <div class="projekty_seznam">
+                <article class="projekt_karta">
+                    <span class="projekt_cislo">01</span>
+                    <h3>Interpret jazyka SOL26</h3>
+
+                    <p>
+                        Projekt spočíval v implementaci interpretu jednoduchého objektově orientovaného
+                        jazyka SOL26. Interpret přijímá program v podobě XML reprezentace abstraktního
+                        syntaktického stromu a provádí jej včetně práce s třídami, dědičností,
+                        metodami, objekty a běhovým prostředím.
+                    </p>
+
+                    <div class="projekt_tagy">
+                        <span>Python</span>
+                        <span>XML</span>
+                        <span>OOP</span>
+                        <span>Docker</span>
+                    </div>
+
+                    <div class="projekt_info">
+                        <span><i class="fa-solid fa-clock"></i> 1 týden</span>
+                        <span><i class="fa-solid fa-graduation-cap"></i> IPP, 2. ročník</span>
+                    </div>
+
+                    <section class="projekt_naucila">
+                        <h4>Co jsem se naučila</h4>
+                        <ul>
+                            <li>Návrh interpretu a běhového prostředí</li>
+                            <li>Práce s XML a validace vstupních dat</li>
+                            <li>Kontejnerizace pomocí Dockeru</li>
+                            <li>Statická analýza kódu nástrojem Ruff</li>
+                        </ul>
+                    </section>
+                </article>
+
+                <article class="projekt_karta">
+                    <span class="projekt_cislo">02</span>
+                    <h3>Databázová aplikace</h3>
+
+                    <p>
+                        Týmový projekt zaměřený na návrh a implementaci relační databáze v Oracle 12c.
+                        Součástí bylo vytvoření ER diagramu, SQL skriptů pro tvorbu schématu,
+                        dotazů SELECT, triggerů, uložených procedur a materializovaných pohledů.
+                    </p>
+
+                    <div class="projekt_tagy">
+                        <span>SQL</span>
+                        <span>Oracle 12c</span>
+                        <span>PL/SQL</span>
+                        <span>ER diagram</span>
+                    </div>
+
+                    <div class="projekt_info">
+                        <span><i class="fa-solid fa-clock"></i> 4 dny</span>
+                        <span><i class="fa-solid fa-users"></i> Týmový projekt</span>
+                        <span><i class="fa-solid fa-graduation-cap"></i> IDS, 2. ročník</span>
+                    </div>
+
+                    <section class="projekt_naucila">
+                        <h4>Co jsem se naučila</h4>
+                        <ul>
+                            <li>Návrh relačního databázového schématu</li>
+                            <li>Psaní komplexních SQL dotazů</li>
+                            <li>Databázové triggery a uložené procedury</li>
+                            <li>Optimalizace dotazů pomocí indexů a EXPLAIN PLAN</li>
+                        </ul>
+                    </section>
+                </article>
+
+                <article class="projekt_karta">
+                    <span class="projekt_cislo">03</span>
+                    <h3>Síťový L4 scanner</h3>
+
+                    <p>
+                        Implementace nástroje pro skenování TCP a UDP portů zadaného zařízení
+                        na síti. Program odesílá pakety přes sockety, analyzuje odpovědi
+                        a vyhodnocuje stav portů jako open, closed nebo filtered.
+                        Součástí projektu bylo také vytvoření testů.
+                    </p>
+
+                    <div class="projekt_tagy">
+                        <span>C++</span>
+                        <span>TCP/IP</span>
+                        <span>UDP</span>
+                        <span>libpcap</span>
+                        <span>Sockety</span>
+                    </div>
+
+                    <div class="projekt_info">
+                        <span><i class="fa-solid fa-clock"></i> 1 týden</span>
+                        <span><i class="fa-solid fa-graduation-cap"></i> IPK, 2. ročník</span>
+                    </div>
+
+                    <section class="projekt_naucila">
+                        <h4>Co jsem se naučila</h4>
+                        <ul>
+                            <li>Práce se síťovými sockety v C++</li>
+                            <li>Principy TCP a UDP komunikace na nízké úrovni</li>
+                            <li>Zachytávání síťového provozu pomocí libpcap</li>
+                            <li>Zpracování argumentů příkazové řádky</li>
+                        </ul>
+                    </section>
+                </article>
+            </div>
+        </section>
+
+        <section id="dovednosti" class="obsah_sekce obsah_svetly">
+            <div class="obsah_hlavicka">
+                <div class="obsah_popisek_radek">
+                    <i class="fa-solid fa-wrench obsah_ikonka"></i>
+                    <p class="obsah_popisek">Dovednosti</p>
+                </div>
+                <h2>Technologie a nástroje</h2>
+            </div>
+
+            <p class="obsah_uvod">
+                Během studia a práce na projektech jsem získala zkušenosti s několika
+                technologiemi. Některé používám pravidelně, jiné zatím hlavně v rámci
+                školních úloh.
+            </p>
+
+            <div class="dovednosti_mrizka">
+                <article class="dovednost_karta">
+                    <h3>Programovací jazyky</h3>
+                    <ul>
+                        <li><i class="devicon-c-plain"></i> C</li>
+                        <li><i class="devicon-python-plain"></i> Python</li>
+                        <li><i class="devicon-csharp-plain"></i> C#</li>
+                        <li><i class="devicon-cplusplus-plain"></i> C++</li>
+                        <li><i class="devicon-typescript-plain"></i> TypeScript</li>
+                    </ul>
+                </article>
+
+                <article class="dovednost_karta">
+                    <h3>Nástroje</h3>
+                    <ul>
+                        <li><i class="devicon-git-plain"></i> Git</li>
+                        <li><i class="devicon-vscode-plain"></i> VS Code</li>
+                        <li><i class="devicon-visualstudio-plain"></i> Visual Studio</li>
+                        <li><i class="devicon-docker-plain"></i> Docker</li>
+                        <li>Ruff</li>
+                    </ul>
+                </article>
+
+                <article class="dovednost_karta">
+                    <h3>Databáze</h3>
+                    <ul>
+                        <li><i class="devicon-sqlite-plain"></i> SQLite</li>
+                        <li><i class="devicon-dot-net-plain"></i> Entity Framework Core</li>
+                    </ul>
+                </article>
+
+                <article class="dovednost_karta">
+                    <h3>Operační systémy</h3>
+                    <ul>
+                        <li><i class="devicon-windows8-plain"></i> Windows</li>
+                        <li><i class="devicon-linux-plain"></i> Linux</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="kontakt" class="obsah_sekce kontakt_sekce">
+
+            <div class="obsah_hlavicka">
+                <div class="obsah_popisek_radek">
+                    <i class="fa-solid fa-envelope obsah_ikonka"></i>
+                    <p class="obsah_popisek">Kontakt</p>
+                </div>
+                <h2>Kontakt a zaměření</h2>
+            </div>
+
+            <p class="obsah_uvod">
+                V případě zájmu mě můžete kontaktovat e-mailem nebo prostřednictvím
+                školních a profesních platforem. Web slouží jako přehled mojí dosavadní
+                práce a dovedností.
+            </p>
+
+            <address class="kontakt_karta">
+                <p><strong>E-mail:</strong> <a href="mailto:xluskak00@vutbr.cz">xluskak00@vutbr.cz</a></p>
+                <p><strong>Studium:</strong> FIT VUT</p>
+                <p><strong>Zaměření:</strong> programování, softwarové projekty, web</p>
+            </address>
+        </section>
+    </main>
+
+    <div class="dekor_roh_dole"></div>
+
+    <!--paticka-->
+    <footer class="footer">
+        <div class="footer_obsah">
+            <div>
+                <p class="footer_popisek">Profilové portfolio</p>
+                <h2>Klára Luskačová</h2>
+                <div class="footer_ikony">
+                    <div>
+                        <i class="devicon-c-plain"></i>
+                        <i class="devicon-python-plain"></i>
+                        <i class="devicon-csharp-plain"></i>
+                        <i class="devicon-cplusplus-plain"></i>
+                        <i class="devicon-typescript-plain"></i>
+                    </div>
+                    <div>
+                        <i class="devicon-git-plain"></i>
+                        <i class="devicon-vscode-plain"></i>
+                        <i class="devicon-visualstudio-plain"></i>
+                        <i class="devicon-docker-plain"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="footer_copyright">© 2026 Klára Luskačová</p>
+    </footer>
+
+    <!--sipecka-->
+    <div id="sipecka">
+        <a href="#uvod" aria-label="Zpět na začátek">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <script>
+        const sekce = document.querySelectorAll("main section[id]");
+        const odkazy = document.querySelectorAll(".navigace a");
+
+        const observer = new IntersectionObserver((zaznamy) => {
+            zaznamy.forEach(zaznam => {
+                if (zaznam.isIntersecting) {
+                    const id = zaznam.target.id;
+                    odkazy.forEach(a => {
+                        a.classList.toggle("aktivni", a.getAttribute("href") === "#" + id);
+                    });
+                }
+            });
+        }, { threshold: 0.4 });
+
+        sekce.forEach(s => observer.observe(s));
+    </script>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navigace = document.querySelector(".navigace");
+
+        hamburger.addEventListener("click", () => {
+            navigace.classList.toggle("otevrene");
+        });
+
+        document.querySelectorAll(".navigace a").forEach(a => {
+            a.addEventListener("click", () => {
+                navigace.classList.remove("otevrene");
+            });
+        });
+    </script>
+
+    
+</body>
+</html>
