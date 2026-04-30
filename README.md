@@ -26,3 +26,6 @@ Při tvorbě projektu byly využita AI jako pomoc při řešení některých slo
 ## Autor
 Klára Luskačová
 xluskak00
+
+## Odkaz na web
+https://klaraluskacova.github.io/itw_projekt2/
